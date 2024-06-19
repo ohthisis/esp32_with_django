@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Live Sensor Data{% endblock title %}
+
+{% block content %}
+<h1 class="title">Enviromental Monitering System</h1><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Temperature</h5>
+                    <p id="temperature" class="card-text text-center">Temperature: ---</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Humidity</h5>
+                    <p id="humidity" class="card-text text-center">Humidity: ---</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="title text-center">Air Quality Sensors</h5>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Sensor Name</th>
+                                <th class="text-center">Value</th>
+                                <th class="text-center">Air Quality</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">MQ135</td>
+                                <td id="mq135Value" class="text-center"> ---</td>
+                                <td id="mq135Quality" class="text-center">---</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Particulate Matter</td>
+                                <td id="pmValue" class="text-center"> ---</td>
+                                <td id="pmQuality" class="text-center"> ---</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <p id="currentTime" class="card-text text-center">Date: ---</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+<script src="{% static 'espapp/index.js' %}" defer></script>
+{% endblock scripts %}

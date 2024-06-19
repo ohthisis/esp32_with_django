@@ -1,0 +1,48 @@
+.card-title,.title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1.25rem;
+}
+
+.row.border-top {
+    border-top: 1px solid #dee2e6;
+}
+
+.card .row div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sensor-quality {
+    font-weight: bold;
+}
+
+.quality-good {
+    background-color: green !important;
+}
+
+.quality-moderate {
+    background-color: orange !important;
+}
+
+.quality-poor {
+    background-color: red !important;
+}
+
+.quality-unhealthy {
+    background-color: darkred !important;
+}
+
+.quality-very-unhealthy {
+    background-color: purple !important;
+}
+.quality-Hazardous {
+    background-color: rgb(222, 4, 222) !important;
+}
+.quality-unknown {
+    color: grey;
+}
